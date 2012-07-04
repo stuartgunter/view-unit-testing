@@ -1,4 +1,4 @@
-Unit testing views (e.g. FreeMarker and Velocity) in Spring MVC
-===============================================================
+Unit Testing Views in Spring MVC
+================================
 
-See [http://stuartgunter.org/unit-testing-views-spring-mvc/] for details.
+See [my blog](http://stuartgunter.org/unit-testing-views-spring-mvc/) for details.
