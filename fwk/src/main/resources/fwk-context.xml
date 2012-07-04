@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Locale Resolver used for unit tests -->
+    <bean class="org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver"/>
+
+    <!--
+        This is the preferred way to test translations.
+        * We SHOULD NOT test l10n (i.e. that a particular translation is what the MessageSource says it is)
+        * We SHOULD test i18n (i.e. that the template is using the MessageSource to render translated text on the page)
+
+        By configuring the MessageSource in this way, we ensure that translation KEYS are shown wherever translations
+        should appear, thereby proving that the module has been correctly internationalised.
+
+        Of course, some applications may want to test l10n rather than i18n, in which case they can simply
+        provide their own messageSource bean to override this one.
+     -->
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="useCodeAsDefaultMessage" value="true"/>
+    </bean>
+</beans>
