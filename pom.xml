@@ -8,6 +8,29 @@
     <packaging>pom</packaging>
 
     <name>View Unit Testing</name>
+    <description>View unit testing support for Spring MVC applications</description>
+
+    <developers>
+        <developer>
+            <id>sgunter</id>
+            <name>Stuart Gunter</name>
+            <url>http://stuartgunter.org</url>
+        </developer>
+    </developers>
+
+    <licenses>
+        <license>
+            <name>Apache 2</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://github.com/stuartgunter/view-unit-testing</url>
+        <connection>scm:git:git@github.com:stuartgunter/view-unit-testing.git</connection>
+        <developerConnection>scm:git:git@github.com:stuartgunter/view-unit-testing.git</developerConnection>
+    </scm>
 
 	<modules>
 		<module>fwk</module>
